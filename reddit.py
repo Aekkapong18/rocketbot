@@ -12,7 +12,7 @@ class Reddit(Plugin, plugin='reddit'):
     def __init__(self):
         self.logger = logging.getLogger(name="reddit")
         self.done = DataStore.get(self.plugin, 'done')
-        logger.error(self.done)
+        self.logger.error(self.done)
         print(self.done)
         if not self.done:
             DataStore.save(self.plugin, 'done', self.done)
